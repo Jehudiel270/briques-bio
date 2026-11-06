@@ -1,0 +1,9 @@
+<script setup lang="ts">
+const route = useRoute()
+const id = computed(() => String(route.params.id))
+usePageTitle('Fiche produit')
+</script>
+
+<template>
+  <WsProductForm :id="id" :key="id" />
+</template>
